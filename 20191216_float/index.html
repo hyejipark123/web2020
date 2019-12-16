@@ -3,8 +3,20 @@
 <head>
 	<meta charset="UTF-8">
 	<title>float</title>
+	<style>
+		div.container{background-color: skyblue;}
+		div img{width: 200px;display: block;float: left;}
+		div.container:after/*컨테이너에 요소중 맨마지*/{content: "";display: block;clear: both;}
+	</style>
 </head>
 <body>
-	test
+	<div class="container">
+	
+		<img src="../images/testimg01.jpg" alt="">
+		<img src="../images/testimg01.jpg" alt="">
+		<img src="../images/testimg01.jpg" alt="">
+		
+	</div>
+	<div>Lorem ipsum dolor sit amet.</div>
 </body>
 </html>
