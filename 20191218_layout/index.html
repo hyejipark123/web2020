@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>layout</title>
+	<style>
+		/* reset */
+		*{margin: 0;padding: 0;}
+		li{list-style: none;}
+		a:visited,a:link{
+			text-decoration: none;
+			color: #000;}
+		/* header */
+		#header{width: 1000px;
+			margin: 0 auto;
+			}
+		#header>h1{text-align: center;}
+		.gnb:after{content:"";display: block;clear: both;}
+		.gnb>li{float: left;width: 166.67px;padding-top:30px; }
+		.gnb>li>a{text-align: center;display: block;
+			transition: all 0.2s;height: 60px;
+			line-height: 60px;}
+		.gnb>li>a:hover{background-color: purple;
+			color: #fff;}
+
+  		div.bgc{background-color: pink;}
+		.visual{width: 1000px;height: 400px;background-color: pink; margin:0 auto;}	
+		.container ul li{float: left; width: 20%;padding-top: 80px;}
+	.container ul li img{width: 80%;}
+
+	</style>
+</head>
+<body>
+	<div id="header">
+		<h1>logo</h1>
+			<ul class="gnb">
+				<!-- ul.gnb>li*6>a[#]>{menu$} -->
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+				<li><a href="#">menu6</a></li>
+			</ul>
+	</div>
+			<div class="visual"></div>
+				<div class="container">
+					<ul>
+						<li><img src="../images/testimg.jpg" alt=""></li>
+						<li><img src="../images/testimg.jpg" alt=""></li>
+						<li><img src="../images/testimg.jpg" alt=""></li>
+						<li><img src="../images/testimg.jpg" alt=""></li>
+					</ul>
+				</div>
+		<div id="footer"></div>
+		</body>
+</body>
+</html>
