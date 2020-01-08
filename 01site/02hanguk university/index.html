@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>한국대학교</title>
+	<link rel="stylesheet" href="css/jquery.bxslider.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.bxslider.js"></script>
+	<script>
+		$(document).ready(function(){
+			var mySlide = $(".slider",).bxSlider({
+				controls:false
+			});
+
+			$(".nextBtn").click(function(){
+				mySlide.goToNextSlide();
+			});
+			$(".prevBtn").click(function(){
+				mySlide.goToPrevSlide();
+			});
+			 $(".sliderOne").bxSlider({
+			 	auto:true,
+				controls:false,/*버튼 없애는 거 */
+			 });
+			var mySlideOne = $(".sliderTwo",).bxSlider({ 
+				mode:"vertical",
+				pager:false,
+				controls:false
+			});
+			$(".topBtn").click(function(){
+				mySlideOne.goToNextSlide();
+			});
+			$(".bottomBtn").click(function(){
+				mySlideOne.goToPrevSlide();
+			});
+		});
+	</script>
+	</head>
+<body>
+	<header id="main_header">
+		<div class="header_utilWrap">
+			<div class="header_util clearfix">
+				<nav class="util_menu">
+					<ul class="clearfix">
+						<li><a href="#">대학교</a></li>
+						<li><a href="#">입학안내</a></li>
+						<li><a href="#">대학원</a></li>
+					</ul>
+				</nav>
+				<nav class="util_menuOne">
+					<ul class="clearfix">
+						<li><a href="#">글자크기</a></li>
+						<li><div class="minus">-</div></li>
+						<li><div class="plus">+</div></li>
+						<li><a href="#">찾아오시는길</a></li>
+						<li><a href="#">ENGLISH</a></li>
+						<li><a href="#">사이트맵</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	<div class="main_middle clearfix">
+		<h1><img src="images/logo.jpg" alt="로고이미지"></h1>
+		<div class="menu_gnb">
+			<nav class="main_gnb">
+				<ul class="clearfix">
+					<li><a href="#">대학소개</a></li>
+					<li><a href="#">학과소개</a></li>
+					<li><a href="#">학사안내</a></li>
+					<li><a href="#">대학생활</a></li>
+					<li><a href="#">학생지원센터</a></li>
+				</ul>
+			</nav>
+			<nav class="main_menu">
+				<ul class="clearfix">
+					<li><img src="images/menu2.jpg" alt="메뉴1"></li>
+					<li><img src="images/menu1.jpg" alt="메뉴2"></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+	</header>
+	<!-- section -->
+	<div class="container">	
+		<div class="wrapper clearfix">
+			<div class="textWrap">
+				<p>함께 나누며 세상을 이끌어</p>
+				<h1>세계로향하는 한국대학교</h1>
+			</div>
+			<nav class="icon">
+				<ul class="clearfix">
+					<li><a href="#"><img src="images/icon1.png" alt="아이콘"></a></li>
+					<li><a href="#"><img src="images/icon2.png" alt="아이콘"></a></li>
+					<li><a href="#"><img src="images/icon3.png" alt="아이콘"></a></li>
+					<li><a href="#"><img src="images/icon4.png" alt="아이콘"></a></li>
+				</ul>
+			</nav>
+		</div>
+	<!-- slider -->
+	<div class="sliderWrap">
+		<ul class="sliderpage clearfix">
+			<li>
+				<ul class="slider">
+					<li><img src="images/slider1.png" alt="img01">
+							<div class="slidertxt">
+								 <p><span>한국</span>에서</p>
+								 <p><span>시작</span>하는</p>	
+								 <p>새로운 <span>꿈</span></p>
+							</div>
+							<div class="sliderBox">
+								<p>자세히 보기 ▶</p>
+							</div>
+					</li>
+					<li><img src="images/slider1.png" alt="img01"></li>
+					<li><img src="images/slider1.png" alt="img01"></li>
+					<li><img src="images/slider1.png" alt="img01"></li>
+				</ul>
+				<div class="nextBtn">
+					<img src="images/btn_right.png" alt="다음">
+				</div>
+				<div class="prevBtn">
+					<img src="images/btn_left.png" alt="다음">
+				</div>
+			</li>
+				<li>
+					<div class="appBackImg">
+						<img src="images/slider2.png" alt="img02">
+						<div class="Apptxt">
+							<p><span>APP</span>으로</p>
+							<span>스마트도서관</span>
+							<p>바로 이용하자!</p>
+						</div>
+						<div class="ApptxtOne">
+							<p>모바일 열람증은</p>
+							<p>도서관 자료실/도서대출 등에</p>
+							<p>사용 할 수 있습니다.</p>
+						</div>
+						<div class="AppBox">
+							<p><a href="javascript:void(0)">자세히 보기 ▶</a></p>
+						</div>
+					</div></li>
+				<li>
+					<div class="HotclickTitle">
+						<strong>HOT CLICK</strong>
+						<div class="HotclickIcon">
+							<ul class="Hotclick">
+								<li><img src="images/click1.png" alt="">
+									<p>국제교류</p>
+									<p>센터</p></li>
+								<li><img src="images/click2.png" alt="">
+									<p>원격지원</p>
+									<p>시스템</p></li>
+								<li><img src="images/click3.png" alt="">
+									<p>예산/결산</p>
+									<p>공고</p></li>
+							</ul>
+						</div>
+					</div>
+				</li>				
+				<li>
+					<div class="notice">
+						<strong>공지사항</strong>
+						<div class="noticeOne">
+							<ul class="noticeTxt" >
+								<li>
+									<a href="javascript:void(0)">
+										· [공지] 한국대학교 웹진...
+										<span>2016-06-17</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+										· [보도] 우수대학교 선정 수상
+										<span>2016-06-12</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+										· [공지] 대학입시 설명회
+										<span>2016-06-04</span>
+									</a>
+								</li>
+								<li>
+									<a href="javascript:void(0)">
+										· [공지] 2016년 1학기 성적...
+										<span>2016-05-14</span>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li>
+					<div class="snsnews">
+						<strong>SNS NEWS</strong>
+						<img src="images/학교01.jpg" alt="">
+						<div class="snsTxt">
+							<p>한국대학교는</p>
+							<p>2017학년도 신입생</p>
+							<p>입학식을 3월 2일(목)</p>
+							<p>본교 종합체육관 ...</p>
+						</div>
+						<ul class="snsIcon">
+							<li><img src="images/sns04.png" alt=""></li>
+							<li><img src="images/sns03.png" alt=""></li>
+							<li><img src="images/sns02.png" alt=""></li>
+							<li><img src="images/sns01.png" alt=""></li>
+						</ul>	
+					</div>
+				<li>
+					<div class="campusContent">
+						<img src="images/slider3.png" alt="">
+						<div class="campusTxt">
+							캠퍼스 투어
+						</div>
+					</div>
+				</li>				
+				<li>
+						<div class="media">
+							<img src="images/slider4.png" alt="">
+							<div class="mediaPlay">
+								<img src="images/button.png" alt="">
+							</div>
+						</div>
+				</li>
+				<li>
+					<div class="bigSlider">
+						<ul class="sliderOne">
+							<li><img src="images/man01.jpg" alt="">
+								<div class="sliderOnetxt">
+									<p>2017년 신·편입생 2차 모집</p>
+									<strong>2017.7.1 ~ 7.10</strong>
+								</div>
+								<div class="sliderOnebox">
+								<p>입학사전예약 ▶</p>
+							</div>
+							</li>
+							<li><img src="images/man01.jpg" alt=""></li>
+							<li><img src="images/man01.jpg" alt=""></li>
+							<li><img src="images/man01.jpg" alt=""></li>
+						</ul>
+					</div>
+				</li>
+				</ul>
+
+
+
+				<div class="sliderWrap1">
+					<ul class="clearfix">
+						<li class="left">
+							<div class="schedule">
+							<strong>학사일정</strong>
+							<p><span><</span> 2016 07 <span>></span></p>
+						</div>
+						</li>
+						<li class="right">
+							<div class="smallSlider">
+								<ul class="sliderTwo">
+									<li>
+									<span>2016-1학기 성적 열람 및 상담 신청</span>
+									성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...
+									</li>
+									<li>
+									<span>2016-1학기 성적 열람 및 상담 신청</span>
+									성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...
+									</li>
+									<li>
+									<span>2016-1학기 성적 열람 및 상담 신청</span>
+									성적열람및 상담신청은 본인이 수강한 교과목 설문조사를 모두 마친 후 확인이...
+									</li>
+								</ul>
+								<div class="topBtn">
+									<img src="images/btn_top.png" alt="위">
+								</div>
+								<div class="bottomBtn">
+									<img src="images/btn_bottom.png" alt="아래">
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>	
+			<footer>	
+	 			<div class="footerBox">	
+					<div class="footernav clearfix">
+						<ul>
+							<li>회사소개</li>
+							<li>한국대학교</li>
+							<li>개인정보취급방침</li>
+							<li>이용정책</li>
+							<li>입점/제휴문의 및 광고</li>
+							<li>이메일 문단수집거부</li>
+						</ul>
+					</div>
+				<div class="footerText">
+					<p>대표자:무지개 서울특별시 구로구 구로로 300(구로동 6가)  사업자 등록번호:123-56-7890234</p>
+					<p>통신판매업 신고번호:제 1234 서울 구로구 1004호 개인정보관리 책임자:무지개  소비자피해보상보험</p>
+					<p>고객센터:1234-5678  FAX:02-1234-5678  HANKUKUNIVERSITY @HANKUK>COM</p>
+					<p>COMPYRIGHT ⓒHANKUK. ALL RIGHTS RESERVED</p>
+				</div>
+	 			</div>
+			</footer>
+				</div>
+</body>
+</html>
