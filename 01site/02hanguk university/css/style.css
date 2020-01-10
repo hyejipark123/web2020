@@ -88,10 +88,7 @@ nav.main_gnb>ul>li>a:hover{
 }
 .main_menu{}
 .main_menu>ul{}
-.main_menu>ul>li{
-	float: right;
-	_background-color: pink;
-}
+.main_menu>ul>li{float: right;}
 
 /* header end */
 
