@@ -101,6 +101,16 @@
 	background-image: url(../images/bg1.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
+	position: relative;
+}
+div.airbg{
+	position: absolute;
+	animation:balloon 3s alternate infinite cubic-bezier(0.32, 0, 0.57, 0.93);;
+	left: 38%;
+}
+@keyframes balloon{
+	from{top:150px;}
+	to{top:200px;}
 }
 .topWrap{
 	width: 980px;
@@ -115,7 +125,6 @@
 }
 
 .slider_rev{
-	_position: absolute;
 	float: right;
 	width: 350px;
 
@@ -278,6 +287,12 @@ legend{
 .box_image.place{
 	width: 100%;
 }
+
+
+/* second_line end */
+
+/* third_line start */
+.third_line{}
 .box_one{
 	position: absolute;
 	background-color: #529351;
@@ -304,10 +319,10 @@ legend{
 	height: 65px;
 	bottom: 0;
 	background-color: rgba(0,0,0,0.6);
-	text-align: center;
 	line-height: 20px;
 	color: #fff;
 	padding-left: 10px;
+	padding-top: 10px
 }
 .tokyo{
 	position: absolute;
@@ -315,19 +330,6 @@ legend{
 	top: 10px;
 	color: #fff;
 	left: 90px;
-}
-.wather{
-	float: left;
-	padding-top: 10px;
-	font-weight: bold;
-}
-.wather_info{
-	float: left;
-	font-size: 13px;
-}
-.reviewTxt{
-	position: absolute;
-	top: 30px;
 }
 
 .box_four{
@@ -339,7 +341,15 @@ legend{
 	color: #fff;
 	line-height: 20px;
 	padding-left: 10px;
+	padding-top: 10px
 }
+.boxSubject{
+	font-weight: bold;
+}
+.boxInfor{
+	font-size: 13px;
+}
+
 .box_imageSns{}
 .reviewTxt{
 	position: absolute;
@@ -351,11 +361,7 @@ legend{
 	color: #484848;
 	_background-color: blue;
 }
-.reviewTxt img{
-	background-color: #f00;
-	position: absolute;
-	top: 20px;
-}
+.snsStar{}
 .reviewTitle{
 	position: absolute;
 	color: #44629e;
@@ -364,13 +370,11 @@ legend{
 	padding-left: 15px;
 	font-weight: bold;
 }
-.facebook{
-	_float: left;
-	padding-top: 10px;
-	font-weight: bold;
-}
-.facebook_name{
-	float: left;
-}
 
-/* secondline end */
+/* third_line end */
+
+/* fourth_line start */
+
+
+
+/* fourth_line end */
