@@ -519,15 +519,7 @@ footer{
 	font-size:15px;
 	text-align: center; 
 	position: relative;}
-.footernav ul li:before{
-	content:""; 
-	display: block; 
-	width: 1.4px; 
-	height: 12px; 
-	background-color: #000;
-	position: absolute; 
-	top: 5px; 
-	left: 0px;}
+
 .footernav ul li:first-child:before {display:none;}
 .footerText{
 	position: absolute; 
