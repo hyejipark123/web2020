@@ -115,6 +115,17 @@ div.airbg{
 	from{top:150px;}
 	to{top:200px;}
 }
+
+div.ani_paper{
+	position: absolute;
+	animation:paper 5s alternate infinite ;
+}
+
+@keyframes paper{
+	from{}
+	to{ }
+}
+
 .topWrap{
 	width: 980px;
 	margin: 0 auto;
@@ -387,6 +398,10 @@ legend{
 	font-weight: bold;
 	color: #484848;
 	_background-color: blue;
+}
+.reviewTxt>img{
+	float: left;
+	padding: 17px;
 }
 .snsStar{}
 .reviewTitle{
