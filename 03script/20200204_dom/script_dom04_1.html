@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>DOM04 test</title>
+	<style>
+		#myDiv{width: 500px;height: 500px;position: absolute;}
+	</style>
+	<script>
+		function creatDiv(){
+			var obj = document.getElementById("parent");
+			var newDiv = document.createElement("div");
+			newDiv.innerHTML = "힝 속았지?";
+			newDiv.setAttribute("id","myDiv");
+			newDiv.style.backgroundColor = "pink";
+
+			newDiv.onclick = function(){
+				var p = this.parentElement;
+				console.log(p);
+				p.removeChild(this);
+			};
+			
+			obj.appendChild(newDiv);
+		}
+	</script>
+</head>
+<body>
+	<div id="parent">
+		<h3>안녕하세요</h3>
+		<hr>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum mollitia voluptates hic cupiditate nam non culpa quasi harum, dicta vel repudiandae accusamus quis consectetur architecto. Necessitatibus doloribus, minus amet. Maxime.</p>
+		<a href="#" onclick="creatDiv()">클릭클릭클릭클릭</a>
+	</div>
+</body>
+</html>
