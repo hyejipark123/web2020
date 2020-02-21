@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>tab_img</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".contentWrap>ul>li").click(function(){
+				var liImg = $(this).index();
+				$(".contentWrap>ul>li").removeClass();
+				$(this).addClass("active");
+				$(".contentImg>img").hide();
+				$(".contentImg>img").eq(liImg).show();
+
+			});
+		});
+	</script>
+	<style>
+		.contentWrap{
+			width: 600px;
+			margin: 0 auto;
+		}
+		.contentWrap>ul>li{
+			float: left;
+			width: 133px;
+			height: 40px;
+		}
+		.contentWrap .contentImg img{display: none;}
+		.contentWrap .contentImg img:first-child{display: block;}
+	</style>
+</head>
+<body>
+	<div class="contentWrap">
+		<ul class="clearfix">
+			<li><img src="../images/btn1_1.jpg" alt="봄"></li>
+			<li><img src="../images/btn2_1.jpg" alt="여름"></li>
+			<li><img src="../images/btn3_1.jpg" alt="가을"></li>
+			<li><img src="../images/btn4_1.jpg" alt="겨울"></li>
+		</ul>
+		<div class="contentImg">
+		<img src="../images/spring.jpg" alt="봄">
+		<img src="../images/summer.jpg" alt="여름">
+		<img src="../images/fall.jpg" alt="가을">
+		<img src="../images/winter.jpg" alt="겨울">
+	</div>
+	</div>
+	
+</body>
+</html>

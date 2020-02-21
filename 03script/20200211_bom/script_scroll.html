@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>scroll</title>
+	<script>
+		//window.onload = function(){}
+
+		function startScroll(){
+			setInterval("autoScroll()",200);
+		}
+		function autoScroll(){
+			window.scrollBy(0,5)
+		}
+		window.onload = function(){
+			startScroll();
+		}
+	</script>
+</head>
+<!-- <body onload="startScroll()"> -->
+<body>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+	Lorem ipsum dolor sit amet,<br> consectetur adipisicing elit.<br> Modi ipsum unde repudiandae sunt odio tempore quo<br> fugiat libero recusandae quis!<br><br>
+
+	<a href="#" onclick="window.scrollTo(0,0)">▲</a>
+
+	<a href="#" onclick="window.location.href='http://www.daum.net'">다음이동</a>
+
+	<div onclick="window.location.href='http://www.daum.net'">다음1</div>
+
+	<div onclick="dUrl()">다음2</div>
+	<script>
+		function dUrl(){
+			window.location.href = "http://www.daum.net";
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>tabmenu</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".contentWrap>ul>li").click(function(){
+				var liNum = $(this).index();
+				$(".contentWrap>ul>li").removeClass();
+				$(this).addClass("active");	
+				$(".text>div").hide();
+				$(".text>div").eq(liNum).fadeIn();
+			});
+		});
+	</script>
+	<style>
+		.contentWrap{
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.contentWrap>ul>li{
+			float: left;
+			width: 20%;
+			border: 1px solid #000;
+			text-align: center;
+			line-height: 40px;
+			position: relative;
+		}
+		.contentWrap>ul>li.active:before{
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			position: absolute;
+			background-color: black;
+			top:50px;
+			left: 50%;
+			transform: translate(-50%,0);
+		}
+		.contentWrap>ul>li:hover{
+			background-color: green;
+		}
+		.contentWrap>ul>li.active{
+			background-color: orange;
+			color: #fff;
+		}
+		.text{
+			border: 1px solid #000;
+		}
+		.text div{
+			padding: 20px;
+			display: none;
+		}
+		.text div:first-child{
+			display: block;
+		}
+	</style>
+</head>
+<body>
+	<div class="contentWrap">
+		<ul class="clearfix">
+			<li>menu1</li>
+			<li>menu2</li>
+			<li>menu3</li>
+			<li>menu4</li>
+			<li>menu5</li>
+		</ul>
+		<div class="text">
+			<div>⑴ Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, minus.</div>
+			<div>⑵ Perspiciatis mollitia vel ratione molestias architecto laboriosam ipsam quibusdam quaerat.</div>
+			<div>⑶ Repellendus repellat consectetur veritatis molestias, et debitis facere officiis dolorem.</div>
+			<div>⑷ Ad laudantium, assumenda incidunt numquam maxime possimus quae labore eos?</div>
+			<div>⑸ Sint obcaecati velit expedita rerum recusandae, quos deserunt eligendi vero!</div>
+		</div>
+	</div>
+</body>
+</html>

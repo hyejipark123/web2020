@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>change</title>
+	<script>
+		var next = 1;
+		function change(){
+			
+			next++; // next = next+1;
+			if(next ==10){
+				next = 1;
+			}
+			console.log(next); 
+		}
+	</script>
+</head>
+<body>
+	<h3>new Image()로 이미지 로딩</h3>
+	<hr>
+	<img src="../../images/apple.png" alt="사과" onclick="change()">
+</body>
+</html>
