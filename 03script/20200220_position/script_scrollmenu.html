@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>scrollmenu</title>
+	<link rel="stylesheet" href="../../css/reset.css">
+	<script src="../../js/jquery-3.1.1.min.js"></script>
+	<script src="../../js/jquery.mousewheel.min.js"></script>
+	<style>
+		nav.menu{
+			background-color: #cdcdcd;
+			width: 100%;
+			transition: 0.3s;
+		}
+		nav.menu.fixed{position: fixed;top: 0;background-color: #000;}
+		nav.menu.fixed a{color: #fff;}
+		nav.menu ul li{
+			float: left;
+			width: 20%;
+		}
+		nav.menu ul li a{
+			display: block;
+			text-align: center;
+			line-height: 40px;
+		}	
+		.contents{height: 3000px;}
+	</style>
+	<script>
+		$(function(){
+			// $(window).scroll(function(){
+			// 	var winTop = $(window).scrollTop();
+			// 	if(winTop>100){
+			// 		$(".menu").addClass("fixed");
+			// 	}else{
+			// 		$(".menu").removeClass("fixed");
+			// 	}
+			// });
+			$(document).mousewheel(function(e,delta){
+				console.log(delta);
+				$(window).scroll(function(){
+					var winTop = $(window).scrollTop();
+					
+					if(winTop>100){
+						if(delta>0){
+							$(".menu").addClass("fixed");
+						}else{
+							$(".menu").removeClass("fixed");
+						} //delta
+					}else{
+						$(".menu").removeClass("fixed");
+					} //winTop
+
+				}); //scroll end
+			});
+
+		});
+	</script>
+</head>
+<body>
+	<div class="wrap">
+		<nav class="menu"> <!-- fixed -->
+			<ul class="clearfix">
+				<li><a href="#">menu1</a></li>
+				<li><a href="#">menu2</a></li>
+				<li><a href="#">menu3</a></li>
+				<li><a href="#">menu4</a></li>
+				<li><a href="#">menu5</a></li>
+			</ul>
+		</nav>
+		<div class="contents">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error similique officia, iusto maxime, facilis molestias provident facere nihil, culpa expedita officiis voluptate excepturi perspiciatis et repellendus accusantium sequi placeat porro veniam aperiam nisi quasi magni doloribus, dolore. Quae beatae distinctio voluptas reprehenderit sint, accusantium a tempore aspernatur enim, corporis voluptatibus. Sequi consequuntur facere earum ratione dolor placeat molestiae necessitatibus maiores iusto quaerat, a eveniet nisi dicta, laborum sed iure quod neque hic laboriosam. Necessitatibus voluptatibus quaerat cupiditate sapiente ipsum consectetur a blanditiis sed commodi quisquam excepturi tenetur earum dolor officiis accusantium deserunt dicta quis odit neque, ex repellendus. Nesciunt, laborum.</div>
+	</div>
+</body>
+</html>

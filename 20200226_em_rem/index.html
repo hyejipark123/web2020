@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>em rem</title>
+	<style>
+		.wrapper div.one{font-size: 2em;}
+		.wrapper div.two{font-size: initial;} /*상속받지않음*/
+		.wrapper div.three{font-size: 2em;}
+		.wrapper1 div{font-size: 2rem;}
+		body{color: #cdcdcd}
+		.top{color: blue;font-size: 2em;}
+		.top>span{color: initial;font-size: initial;}
+	</style>
+
+</head>
+<body>
+	<div class="wrapper">
+		<div class="one">2em
+			<div class="two">
+				2em
+				<div class="three">2em</div>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper1">
+		<div>2em
+			<div>
+				2em
+				<div>2em</div>
+			</div>
+		</div>
+	</div>
+	<div class="top">
+		hyeji
+		<span>logo</span>
+	</div>
+</body>
+</html>

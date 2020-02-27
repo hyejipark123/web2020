@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/reset.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<style>
+		/*.row div{text-align: center;}*/
+		.bg-skyblue{background-color: skyblue;}
+		.bg-pink{background-color: pink;}
+		.h100{height: 100px;}
+
+	</style>
+</head>
+<body>
+	<!-- <div class="container text-center">
+		<div class="row bg-primary">
+			12그리드는 고정 
+			<div class="col-sm-6 col-md-4">test1</div>
+			<div class="col-sm-6 col-md-4">test2</div>
+			<div class="d-none d-md-block col-md-4">test3</div>
+		</div>
+		<div class="row bg-secondary text-white">
+			<div class="col-md-3">test1</div>
+			<div class="col-md-3">test2</div>
+			<div class="col-md-3">test3</div>
+			<div class="col-md-3">test4</div>
+		</div>
+		<div class="row bg-success">
+			<div class="col-md-6">test1</div>
+			<div class="col-md-6">test2</div>
+		</div>
+	</div> -->
+	<div class="bg-skyblue">
+		<div class="container text-center bg-primary">
+			<div class="row">
+				<div class="col-12 col-sm-3 col-lg-6 bg-success h100">1</div>
+				<div class="col-12 col-sm-3 col-lg-6 bg-danger">2</div>
+				<div class="col-12 col-sm-3 d-lg-none bg-info">3</div>
+				<div class="col-12 col-sm-3 d-lg-none bg-warning">4</div>
+				<div class="col-12 d-sm-none bg-secondary">5</div>
+				<div class="col-12 d-sm-none bg-light">6</div>
+			</div>
+		</div>
+	</div>
+	<div>
+		<div class="container text-center bg-primary">
+			<div class="row">
+				<div class="col bg-success h100">7</div>
+				<div class="col bg-danger">8</div>
+				<div class="col bg-info">9</div>
+				<div class="col bg-warning">10</div>
+				<div class="col bg-secondary">11</div>
+				<div class="col bg-light">12</div>
+			</div>
+		</div>
+	</div>
+	<div class="bg-pink">
+		<div class="container text-center bg-primary">
+			<div class="row">
+				<div class="col bg-success h100">1</div>
+				<div class="col bg-danger">2</div>
+				<div class="col bg-info">3</div>
+				<div class="col bg-warning">4</div>
+				<div class="col bg-secondary">5</div>
+				<div class="col bg-light">6</div>
+			</div>
+		</div>
+	</div>
+	<!-- 
+	p-0
+	p-1 0.25 4px(16px)
+	p-2 0.5  8px(16px)
+	p-3 1	16px
+	p-4 1.5 24px
+	p-5 3	48px -->
+
+	<div class="container mt-3">
+		<div class="row">
+			<button type="button" class="btn btn-outline-primary">basic</button>
+			<button type="button" class="btn btn-secondary ml-2">secondary</button>
+			<button type="button" class="btn btn-warning ml-2 mr-2">warning</button>
+			<button class="btn btn-primary">
+ 			 <span class="spinner-border spinner-border-sm text-dark"></span>
+  				Loading..
+			</button>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="btn-group ml-auto">
+
+				<div class="btn-group">
+					<a href="#!" class="btn btn-primary dropdown-toggle"  data-toggle="dropdown">Apple</a>
+					<div class="dropdown-menu">
+						<a href="#!" class="dropdown-item">Iphone 10</a>
+						<a href="#!" class="dropdown-item">Iphone 20</a>
+					</div>
+				</div>
+				<div class="btn-group">
+					<a href="#!" class="btn btn-danger dropdown-toggle"  data-toggle="dropdown">Samsung</a>
+					<div class="dropdown-menu">
+						<a href="#!" class="dropdown-item">Note 10</a>
+						<a href="#!" class="dropdown-item">Note 20</a>
+					</div>
+				</div>
+				<a href="#!" class="btn btn-primary">Sony</a>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<a href="#coll" class="btn btn-primary" data-toggle="collapse">상세보기</a>
+		<button class="btn btn-secondary" data-toggle="collapse" data-target="#coll1">상세보기1</button>
+		<div id="coll" class="collapse">
+			<div class="card card-body">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi illo nam error nostrum cum, quos, aut consequatur consequuntur provident assumenda in at mollitia. Aspernatur in ea nobis ut ducimus tempore, distinctio facilis id neque iure reprehenderit iusto fugiat repudiandae error quam nemo doloribus debitis unde, reiciendis sit consequuntur perspiciatis ullam. Amet dicta obcaecati aspernatur, eligendi corporis magni facere possimus vero, voluptatem qui iste est reprehenderit tempora blanditiis non consequuntur, sit. Aliquam vero molestias sed alias tempora quas, deserunt facere asperiores maxime itaque nam, praesentium eum dolores dolore sint nulla officiis, laboriosam quam voluptatum aperiam voluptatem architecto! Qui, similique distinctio iusto.
+			</div>
+		</div>
+		<div id="coll1" class="collapse">
+			<div class="card card-body">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugiat commodi culpa delectus facilis omnis maiores, pariatur quis architecto fugit, harum. Quasi nam itaque quisquam tempore saepe magni laudantium neque similique ratione. Maiores sapiente impedit reiciendis incidunt fugit, doloribus numquam facere voluptatibus amet laborum saepe, repellendus itaque quaerat sint aspernatur, quasi tenetur ut temporibus! Facere harum in ipsa laudantium ullam asperiores, natus totam, hic incidunt iure omnis reprehenderit magnam esse. Dolorem, quo, officia. Similique ex aspernatur laboriosam ratione consectetur omnis animi dicta quia saepe consequatur, cupiditate quis, ducimus est, voluptatum natus placeat aliquam atque officiis eum possimus reprehenderit voluptas modi cumque. Voluptatem tenetur reprehenderit maiores hic, suscipit accusamus optio quo corporis tempore pariatur ea perferendis officia sunt illum quas ducimus, saepe non voluptate. Est, totam explicabo. Quae quasi consequatur inventore totam, sunt quaerat, accusamus atque voluptatibus sequi, neque, deleniti accusantium eius omnis laborum incidunt. Distinctio iure cumque fugit commodi, doloremque consectetur.
+			</div>
+		</div>
+	</div>
+	<div class="bg-dark">
+		<div class="container">
+			<nav class="navbar navbar-expand-md navbar-dark">
+				<a href="#" class="navbar-brand">LOGO</a>
+				<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#menu1">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="menu1">
+					<ul class="navbar-nav ml-auto">
+						<li class="nav-item"><a href="#!" class="nav-link text-white">menu1</a></li>
+						<li class="nav-item"><a href="#!" class="nav-link text-white">menu2</a></li>
+						<li class="nav-item"><a href="#!" class="nav-link text-white">menu3</a></li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+	</div>
+</body>
+</html>
