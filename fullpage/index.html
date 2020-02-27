@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>:::SEOUL BIKE:::</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/fullpage.css">
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.fullPage.js"></script>
+	<script>
+		$(document).ready(function(){
+			$("#fullpage").fullpage({
+				anchors:["1st","2st","3st","4st","5st"],
+				menu:"#topMenu",
+				navigation:true,
+				slideNavigation:true
+			});
+		});
+	</script>
+</head>
+<body>
+	<nav id="navTop">
+		<div class="header">
+			<img src="images/logo.png" alt="Logo">
+			<ul id="topMenu" class="clearfix">
+				<li>
+					<a href="javascript:void(0);">따릉이란</a>
+					<ul class="submenu">
+						<li><a href="#!">따릉이소개</a></li>
+						<li><a href="#!">이용안내</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">대여소조회</a>
+				</li>
+				<li>
+					<a href="javascript:void(0);">이용권구매</a>
+					<ul class="submenu">
+						<li><a href="#!">회원</a></li>
+						<li><a href="#!">비회원</a></li>
+					</ul>
+				</li>
+				<li>
+					<a href="javascript:void(0);">고객센터</a>
+					<ul class="submenu">
+						<li><a href="#!">공지사항</a></li>
+						<li><a href="#!">시민의견수렴</a></li>
+						<li><a href="#!">FAQ</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="fullpage">
+		<div class="section page" id="page1" data-anchor="1st">
+			<!-- 구름 -->
+			<div class="bg_cloud">
+				<img src="images/cloud.png" alt="구름" class="cloud1">
+				<img src="images/cloud1.png" alt="구름" class="cloud2">
+				<img src="images/cloud2.png" alt="구름" class="cloud3">
+			</div>
+			<!-- 자동차 -->
+			<div class="bg_car">
+				<img src="images/car.png" alt="car" class="car1">
+				<img src="images/car1.png" alt="car" class="car2">
+				<img src="images/car2.png" alt="car" class="car3">
+			</div>
+			<!-- 자전거 -->
+			<div class="bg_bike">
+				<img src="images/bike.png" alt="bike">
+			</div>
+		</div>
+		<div class="section page" id="page2" data-anchor="2st">
+			<ul class="list clearfix">
+				<li>
+					<img src="images/sbike01.jpg" alt="">
+					<h1>대여방법</h1>
+				</li>
+				<li>
+					<img src="images/sbike02.jpg" alt="">
+					<h1>반납방법</h2>
+				</li>
+				<li>
+					<img src="images/sbike03.jpg" alt="">
+					<h1>대여소 현황</h1>
+				</li>
+				<li>
+					<img src="images/sbike04.jpg" alt="">
+					<h1>대여하기</h1>
+				</li>
+			</ul>
+		</div>
+		<div class="section page" id="page3" data-anchor="3st">
+			3
+		</div>
+		<div class="section page" id="page4" data-anchor="4st">
+			4
+		</div>
+		<div class="section page" id="page5" data-anchor="5st">
+			5
+		</div>
+	</div>
+</body>
+</html>
