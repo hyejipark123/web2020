@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>svg</title>
+	<link rel="stylesheet" href="../css/reset.css">
+	<style>
+		body{background-color: skyblue;}
+		.svg{
+			width: 200px;height: 200px;
+			background-image: url(circle01.svg); 
+			background-color: blue;}
+		.circle01{width: 200px;height: 200px;}
+
+		#Layer_1 circle{
+			stroke:#000;
+			stroke-width:1;
+			fill:#ff0;
+			stroke-dasharray: 290;
+			stroke-dashoffset:0;
+			stroke-linecap: round;
+			
+		}
+		@keyframes circleAni{
+			from{stroke-dashoffset:290;}
+			to{stroke-dashoffset:0;}
+		}
+		.circle01:hover circle{
+		animation:circleAni 1s forwards;
+		}
+		.typeH{width: 200px;height: 200px;}
+		#LayerH path{
+			fill: skyblue;
+			stroke: #000;
+			stroke-width:4;
+			stroke-dasharray: 370;
+			stroke-linecap: round;
+				
+			animation:typeH 3s linear infinite;
+		}
+		@keyframes typeH{
+			0%{stroke-dasharray: 370; fill: skyblue}
+			100%{stroke-dasharray: 0; fill: red}
+	</style>
+</head>
+<body>
+	<img src="circle01.svg" alt="">
+	<div class="svg"></div>
+	<div class="circle01">
+		<svg id="Layer_1" x="0px" y="0px" width="200px" height="200px" viewBox="0 0 100 100">
+			<circle fill="#FFFFFF" stroke="#231F20" stroke-width="2" stroke-miterlimit="10" cx="50" cy="49.155" r="45.063"/>
+		</svg>
+	</div>
+	<div class="typeH">
+		<svg version="1.1" id="LayerH"  x="0px" y="0px"
+	 width="100%" height="100%" viewBox="0 0 100 100">
+	<g>
+		<path d="M85.008,8.796c1,0,1.5,0.5,1.5,1.5v77.7c0,1-0.5,1.5-1.5,1.5h-16.6c-1,0-1.5-0.5-1.5-1.5v-36.6h-31.2v36.6
+			c0,1-0.5,1.5-1.5,1.5h-16.6c-1,0-1.5-0.5-1.5-1.5v-77.7c0-1,0.5-1.5,1.5-1.5h16.6c1,0,1.5,0.5,1.5,1.5v36h31.2v-36
+			c0-1,0.5-1.5,1.5-1.5H85.008z"/>
+	</g>
+	</svg>
+	</div>
+</body>
+</html>
