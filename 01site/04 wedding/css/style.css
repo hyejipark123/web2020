@@ -1,0 +1,214 @@
+@charset "utf-8";
+
+
+/* 이벤트 배너 시작 */
+#eventWrap{
+	background-image: url(../images/event_bg.png);
+}
+.event{
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto;
+	position: relative;
+	_background-color: pink;
+}
+.event_logo{
+	position: absolute;
+	left: 0;}
+.event_logo>img{}
+.event_txt{
+	position: absolute;
+	top: 35px;
+	left: 35%;
+	color: #898989;
+}
+.event_txto{
+	position: absolute;
+	top: 35px;
+	left: 60%;
+	color: #898989;
+}
+.event_txt,.event_txto>span{
+	font-weight: bold;
+}
+.event_go{
+	position: absolute;
+	top: 20px;
+	right: 0;
+	width: 120px;
+	height: 50px;
+	text-align: center;
+	background-color: #f08080;
+	border-radius: 50px;
+	line-height: 50px;
+	font-size: 13px;
+
+}
+.event_go>a{
+	color: #fff;
+	font-weight: bold;
+}
+.event_close{
+	position: absolute;
+	top: 35px;
+	right: 200px;
+}
+
+
+
+
+/* 이벤트배너 끝 */
+
+/* header 시작 */
+.headerWrap{}
+.header{
+	width: 1000px;
+	height: 100px;
+	margin: 0 auto;
+	_background-color: pink;
+	position: relative;
+}
+
+/* sns 아이콘 */
+.header>ul>li{
+	float: left;
+	width: 35px;
+	padding-top: 35px;
+}
+.header>li>a{}
+.header>li>a>img{}
+
+/* 웨딩벨라 로고 */
+.logo{
+	position: absolute;
+	top: 20px;
+	left: 50%;
+	margin-left: -50px;
+}
+.logo>img{}
+
+/* util_menu */
+nav.util_menu{
+	float: right;
+	padding-top: 38px;
+}
+nav.util_menu>ul{}
+nav.util_menu>ul>li{
+	float: left;
+	width: 70px;
+}
+
+nav.util_menu>ul>li>a{
+	display: block;
+	color: #000;
+	line-height: 30px;
+	font-size: 13px;
+	text-align: center;
+}
+nav.util_menu>ul>li:after{
+	content: "";
+	display: block;
+	width: 1px;
+	height: 15px;
+	background-color: #ccc;
+	position: absolute;
+	top: 45px; 
+}
+nav.util_menu>ul>li:first-child:after{
+	content: "";
+	display: none;
+}
+
+
+
+
+
+/* gnb */
+nav.gnb{
+	width: 1000px;
+	margin: 0 auto;
+	position: relative;
+	z-index: 1;
+}
+nav.gnb>ul{}
+nav.gnb>ul>li{
+	float: left;
+	width: 20%;
+	height: 40px;
+	}
+nav.gnb>ul>li>a{
+	display: block;
+	text-align: center;
+	line-height: 40px;
+	font-weight: bold;
+	color: #898989;
+}
+nav.gnb>ul>li:hover{background-color: #f08080;}
+nav.gnb>ul>li:hover a{color: #fff;}
+.submenu{
+	display: none;
+}
+.submenu>li{
+	color: #fff;
+	text-align: center;
+	line-height: 35px;
+	}
+.submenu>li:hover{background-color: #eaa4a4;}
+nav.gnb>ul>:hover .submenu{display: block;}
+nav.gnb>ul>li:hover .submenu{
+	background-color: #f08080;			
+}
+
+/* header 끝 */
+
+/* section 시작*/
+ .container{}
+ .slider{}
+ .slider>li{}
+.bx-wrapper {
+    -moz-box-shadow: 0 none;
+    -webkit-box-shadow: 0 none;
+    box-shadow: 0 none;
+    border: 0 none;
+}
+.bx-wrapper .bx-pager.bx-default-pager a {
+    background: #071726;
+    text-indent: -9999px;
+    display: block;
+    width: 40px;
+    height: 10px;
+    margin: 0 5px;
+    outline: 0;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 0px;
+}
+.bx-wrapper .bx-pager{
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+}
+.bx-wrapper .bx-pager.bx-default-pager a:hover, 
+.bx-wrapper .bx-pager.bx-default-pager a.active, 
+.bx-wrapper .bx-pager.bx-default-pager a:focus{
+    background: #f08080;}
+.member_txt{
+	position: absolute;
+	top: 150px;
+	left: 550px;
+	color: #fff;
+	text-align: center;
+}
+.member_txt>p{}
+
+
+/* section 끝*/
+
+/* best-select 시작*/
+#slider02{
+	width: 1000px;
+	margin: 0 auto;
+	background-color: pink;
+}
+
+/* best-select 끝*/
