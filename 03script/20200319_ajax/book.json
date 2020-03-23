@@ -1,0 +1,22 @@
+{
+	"book":[
+		{
+			"title":"녹나무의 파수꾼",
+			"author":"히가시노 게이고",
+			"bookimg":"01.jpg",
+			"price":"20,000"
+		},
+		{
+			"title":"인사",
+			"author":"김성미",
+			"bookimg":"02.jpg",
+			"price":"15,000"
+		},
+		{
+			"title":"귀찮지만 행복해 볼까",
+			"author":"권남희",
+			"bookimg":"03.jpg",
+			"price":"13,000"
+		}
+	]	
+}

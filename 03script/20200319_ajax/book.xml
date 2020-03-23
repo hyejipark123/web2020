@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<books>
+	<book>
+		<title>녹나무의 파수꾼</title>
+		<author>히가시노 게이고</author>
+		<bookimg>01.jpg</bookimg>
+		<price>20,000</price>
+	</book>
+	<book>
+		<title>인사</title>
+		<author>김성미</author>
+		<bookimg>02.jpg</bookimg>
+		<price>15,000</price>
+	</book>
+	<book>
+		<title>귀찮지만 행복해 볼까</title>
+		<author>권남희</author>
+		<bookimg>03.jpg</bookimg>
+		<price>13,000</price>
+	</book>
+</books>
