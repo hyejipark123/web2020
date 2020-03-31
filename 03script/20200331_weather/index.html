@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>오늘의 날씨</title>
+	<style>
+		@font-face { font-family: 'UhBeeKeongKeong'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeKeongKeong.woff') format('woff'); font-weight: normal; font-style: normal; }
+		body{font-family: "UhBeeKeongKeong";}
+		/*reset*/
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		li{list-style: none;}
+		a:visited,a:link{text-decoration: none;
+		color: black;}
+		.clearfix:after{content: "";display: block;clear: both;}
+		#weather_info{width: 400px;height: 600px;margin:auto;background: url(img/bgimg.jpg) no-repeat center;background-size:cover;border: 1px solid #000;position: relative;margin-top: 30px;}
+		#inpCity{position: absolute;top: 80%;left: 40%;font-family: "UhBeeKeongKeong";font-size: 20px;transform: translateX(-50%;);border-radius: 50px;background-color: transparent;width: 100px;}
+		#time-result{position: absolute;top: 12%;left: 50%;transform: translateX(-50%);z-index: 10;text-align: center;}
+		h1{text-align: center;position: absolute;top: 30%;left:50%;transform: translateX(-50%);}
+		p.w_id,div.icon,p.temp,div.tempWrap{position: absolute;}
+		p.w_id{top: 37%;left: 50%;transform: translateX(-50%);}
+		div.icon{top: 42%;left: 50%;transform: translateX(-50%);}
+		p.temp{top: 60%;left: 45%;font-size: 3em;transform: translateX(-50%);}
+		div.tempWrap{top: 62%;right: 25%;}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="time-result"></div>
+	<div id="weather_info">
+		<h1 class="city">seoul</h1>
+		<section>
+			<select name="inpCity" id="inpCity">
+				<option value="seoul" selected>서울</option>
+				<option value="busan">부산</option>
+				<option value="jeju">제주</option>
+			</select>
+			<p class="w_id">clear</p>
+			<div class="icon">icon</div>
+			<p class="temp">9</p>
+			<div class="tempWrap">
+				<p class="temp_max">최고</p>
+				<p class="temp_min">최저</p>
+			</div>
+		</section>
+	</div>
+	<script>
+		var d = new Date();
+    var currentDate = d.getFullYear() + "년 " + ( d.getMonth() + 1 ) + "월 " + d.getDate() + "일";
+    var currentTime = d.getHours() + "시 " + d.getMinutes() + "분 " + d.getSeconds() + "초";
+    var result = document.getElementById("time-result");
+        result.innerHTML = "오늘은<br> " + currentDate + " 입니다.";
+
+
+    loca("seoul");
+
+		$("#inpCity").change(function(){
+			$("#inpCity option:selected").each(function(){
+				console.log($(this).val());
+				var lo = $(this).val();
+				loca(lo);
+			});
+		});
+
+    function loca(location){
+		var url = 'http://api.openweathermap.org/data/2.5/weather?q='+location+'&APPID=4369a9e7a42952a7d3efb5cb3dd9e15f';
+
+		$.getJSON(url,function(data){
+			var sys = data.sys; 			// 국가명, 일출/일몰			
+			var city = data.name; 			// 도시명
+		
+		 	var weather = data.weather; 	// 날씨 객체
+			var wmain = weather[0].main; 	// 구름 상태(Cloudiness)
+			var w_id = weather[0].id; 		// 날씨상태 id 코드
+			var icon = weather[0].icon;		// 날씨 아이콘 정보
+
+			var country = sys.country;  	// 국가명
+
+			var main = data.main;  			// 온도 기압 관련 객체
+			var temp = main.temp; 			// 현재 온도
+			var temp_min = main.temp_min 	// 최저 온도
+			var temp_max = main.temp_max 	// 최고 온도
+
+			var icon_url = 'img/' + icon +'.svg';
+
+			$(".city").html(city);
+			$(".icon").html("<img src='"+icon_url+"'>");
+			$(".w_id").html(wmain);
+			$(".temp").html(parseInt(temp-273.15)+"&deg;");
+			$(".temp_max").html("▲ "+parseInt(temp_max-273.15)+"&deg;");
+			$(".temp_min").html("▼ "+parseInt(temp_min-273.15)+"&deg;");
+		});
+	}
+	</script>
+</body>
+</html>
