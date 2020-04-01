@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>오늘의 날씨</title>
+	<style>
+		@font-face { font-family: 'UhBeeKeongKeong'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_five@.2.0/UhBeeKeongKeong.woff') format('woff'); font-weight: normal; font-style: normal; }
+		body{font-family: "UhBeeKeongKeong";}
+		/*reset*/
+		*{margin: 0;padding: 0;box-sizing: border-box;}
+		li{list-style: none;}
+		a:visited,a:link{text-decoration: none;
+		color: black;}
+		.clearfix:after{content: "";display: block;clear: both;}
+		#weather_info{width: 300px;height: 230px;margin:auto;background: url(img/bgimg.jpg) no-repeat center;background-size:cover;position: relative;margin-top: 30px;border-radius: 10px;text-align: center;}
+		h1{text-align: center;padding-top: 10px;padding-bottom: 10px;}
+		.temp{font-size: 2em}
+		
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+	<div id="weather_info">
+		<ul>
+			
+		</ul>
+	</div>
+
+	<script>
+		var locCity =["seoul","busan","inchon","jeju"]
+
+		for(var i=0;i<locCity.length;i++){
+				console.log(locCity[i]);
+				var url = 'http://api.openweathermap.org/data/2.5/weather?q='+locCity[i]+'&APPID=4369a9e7a42952a7d3efb5cb3dd9e15f';
+				view();
+		};
+		
+
+
+		function view(){
+		$.getJSON(url,function(data){
+			var sys = data.sys; 			// 국가명, 일출/일몰			
+			var city = data.name; 			// 도시명
+		
+		 	var weather = data.weather; 	// 날씨 객체
+			var wmain = weather[0].main; 	// 구름 상태(Cloudiness)
+			var w_id = weather[0].id; 		// 날씨상태 id 코드
+			var icon = weather[0].icon;		// 날씨 아이콘 정보
+
+			var country = sys.country;  	// 국가명
+
+			var main = data.main;  			// 온도 기압 관련 객체
+			var temp = main.temp; 			// 현재 온도
+			var temp_min = main.temp_min 	// 최저 온도
+			var temp_max = main.temp_max 	// 최고 온도
+
+			//날씨아이콘
+			var icon_url ='http://openweathermap.org/img/w/' + icon +'.png';
+
+			// $(".city").html(city);
+			// $(".icon").html("<img src='"+icon_url+"'>");
+			// $(".w_id").html(wmain);
+			// $(".temp").html(parseInt(temp-273.15)+"&deg;");
+			// $(".temp_max").html("▲ "+parseInt(temp_max-273.15)+"&deg;");
+			// $(".temp_min").html("▼ "+parseInt(temp_min-273.15)+"&deg;");
+
+			var data ="";
+			data += "<li>";
+			data += "<h1 class=\"city\">"+city+"</h1>";
+			data += "<div class=\"icon\"><img src=\""+icon_url+"\"></div>";
+			data += "<div class=\"temp\">"+parseInt(temp-273.15)+" &deg </div>";
+			data += "</li>";
+
+			$("#weather_info>ul").append(data);
+		});
+	}
+	</script>
+</body>
+</html>
