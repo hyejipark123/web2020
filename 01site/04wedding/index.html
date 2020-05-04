@@ -3,24 +3,27 @@
 <head>
 	<meta charset="UTF-8">
 	<title>WEDDING BELLA</title>
-	<link rel="stylesheet" href="css/jquery.bxslider.css">
 	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/slick.css">
+	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/style.css">
 	<script src="js/jquery-3.1.1.min.js"></script>
-	<script src="js/jquery.bxslider.min.js"></script>
+	<script src="js/slick.min.js"></script>
 	<script>
 		$(document).ready(function(){
-			$(".slider").bxSlider({
-				auto:true,
-				controls:false,
+			$(".slider").slick({
+				dots : true,
+				arrows : false,
+				dotsClass : "main_dots",
 			});
-			var bestSel = $(".bestSel").bxSlider({
-				moveSlider:1,
-				sliderWidth:150,
-				minSlides:3,
-				maxSlides:3,
-				slideMargin:10,
-				auto:true
+			$(".bestSel").slick({
+				dots : true,
+				 infinite: true,
+				  slidesToShow: 3,
+				  slidesToScroll: 3
+			});
+			$(".event_close").click(function(){
+				$("#eventWrap").hide();
 			});
 		});
 	</script>
@@ -42,7 +45,7 @@
 				</div>
 			</div>
 			<div class="event_close">
-					<img src="images/cross-out.png" alt="">
+				<img src="images/cross-out.png" alt="">
 			</div>
 		</div>
 	<header>
@@ -102,7 +105,7 @@
 					</div>
 				</li>
 				<li>
-					<img src="images/main_slider1.jpg">	
+					<img src="images/main_slider02.jpg">	
 					<div class="member_txt">
 						<p>웨벨멤버스에게만 드리는</p>
 						<h3>웨딩벨라 「 E - 쿠폰북 」</h3><br><br>
@@ -128,27 +131,73 @@
 			</ul>
 		</div>
 	</section>	
-	<div id="slider02">
-		<div class="bestSel">
-			<div class="item">
-				<img src="images/best01.png" alt="bestslect">
+	<section id="contentWrap">
+		<div id="slider02">
+			<div class="title">
+				<img src="images/best_tit.png" alt="">
 			</div>
-			<div class="item">
-				<img src="images/best02.png" alt="웨딩홀">
-			</div>
-			<div class="item">
-				<img src="images/best03.png" alt="웨딩홀">
-			</div>
-			<div class="item">
-				<img src="images/best01.png" alt="웨딩홀">
-			</div>
-			<div class="item">
-				<img src="images/best02.png" alt="웨딩홀">
-			</div>
-			<div class="item">
-				<img src="images/best03.png" alt="웨딩홀">
+			<div class="bestSel">
+				<div class="item">
+					<img src="images/best01.png" alt="bestslect">
+					<p><span>드레스가든</span><br>소재지: 서울 청담</p>
+				</div>
+				<div class="item">
+					<img src="images/best02.png" alt="웨딩홀">
+					<p><span>그랜드컨벤션</span><br>소재지: 서울 영등포</p>
+				</div>
+				<div class="item">
+					<img src="images/best03.png" alt="웨딩홀">
+					<p><span>메종드비</span><br>소재지: 경기 과천</p>
+				</div>
+				<div class="item">
+					<img src="images/best01.png" alt="웨딩홀">
+				</div>
+				<div class="item">
+					<img src="images/best02.png" alt="웨딩홀">
+				</div>
+				<div class="item">
+					<img src="images/best03.png" alt="웨딩홀">
+				</div>
 			</div>
 		</div>
-	</div>
+		<div class="drestu clearfix">
+			<div class="dress">
+				<div class="title">
+					<img src="images/dre_tit.png" alt="">
+				</div>
+				<div class="cont_dr clearfix">
+					<div class="dr01">
+						<img src="images/dress01.png" alt="">
+						<p><span>엘리자베스</span><br>소재지: 경기 과천</p>
+					</div>
+					<div class="dr02">
+						<img src="images/dress02.png" alt="">
+						<p><span>메종드비</span><br>소재지: 경기 과천</p>
+					</div>
+				</div>
+			</div>
+			<div class="studio">
+				<div class="title">
+					<img src="images/stu_tit.png" alt="">
+				</div>
+				<div class="cont_stu clearfix">
+					<div class="st01">
+						<img src="images/studio01.png" alt="">
+						<p><span>엘리자베스</span><br>소재지: 경기 과천</p>
+					</div>
+					<div class="st02">
+						<img src="images/studio02.png" alt="">
+						<p><span>엘리자베스</span><br>소재지: 경기 과천</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="eventBanner">
+			<div class="banner">
+				<img src="images/event_tit.png" alt="">
+				<p>기분좋은 결혼준비 웨딩벨라에서 2019년 예비 신랑,신부님<br>선착순 300분께 고급 웨딩 체크리스트를 선물합니다. </p>
+			</div>
+		</div>
+	</section>
 </body>
 </html>

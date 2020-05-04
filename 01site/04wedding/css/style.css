@@ -5,6 +5,9 @@
 #eventWrap{
 	background-image: url(../images/event_bg.png);
 }
+#contentWrap{
+	background: url(../images/ctbg.png) no-repeat;
+}
 .event{
 	width: 1000px;
 	height: 100px;
@@ -54,15 +57,12 @@
 	right: 200px;
 }
 
-
-
-
 /* 이벤트배너 끝 */
 
 /* header 시작 */
 .headerWrap{}
 .header{
-	width: 1000px;
+	width: 1200px;
 	height: 100px;
 	margin: 0 auto;
 	_background-color: pink;
@@ -119,13 +119,9 @@ nav.util_menu>ul>li:first-child:after{
 	display: none;
 }
 
-
-
-
-
 /* gnb */
 nav.gnb{
-	width: 1000px;
+	width: 1200px;
 	margin: 0 auto;
 	position: relative;
 	z-index: 1;
@@ -162,36 +158,24 @@ nav.gnb>ul>li:hover .submenu{
 /* header 끝 */
 
 /* section 시작*/
- .container{}
- .slider{}
- .slider>li{}
-.bx-wrapper {
-    -moz-box-shadow: 0 none;
-    -webkit-box-shadow: 0 none;
-    box-shadow: 0 none;
-    border: 0 none;
-}
-.bx-wrapper .bx-pager.bx-default-pager a {
-    background: #071726;
-    text-indent: -9999px;
+.container{}
+.slider{}
+.slider>li{}
+#slick-slide-control00, #slick-slide-control01, 
+#slick-slide-control02, #slick-slide-control03{display: none;}   
+.main_dots{
+	position: absolute;
+    bottom: 20px;
     display: block;
-    width: 40px;
-    height: 10px;
-    margin: 0 5px;
-    outline: 0;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 0px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+    left: 50%;
+    transform: translateX(-50%);
 }
-.bx-wrapper .bx-pager{
-    position: absolute;
-    bottom: 30px;
-    width: 100%;
-}
-.bx-wrapper .bx-pager.bx-default-pager a:hover, 
-.bx-wrapper .bx-pager.bx-default-pager a.active, 
-.bx-wrapper .bx-pager.bx-default-pager a:focus{
-    background: #f08080;}
+.slick-active{background-color: #f08080;}
+.main_dots li{float: left; margin-left: 10px;width: 40px;height: 10px;background-color:#071726;}
 .member_txt{
 	position: absolute;
 	top: 150px;
@@ -201,14 +185,31 @@ nav.gnb>ul>li:hover .submenu{
 }
 .member_txt>p{}
 
-
 /* section 끝*/
 
 /* best-select 시작*/
 #slider02{
-	width: 1000px;
+	width: 1200px;
 	margin: 0 auto;
 	background-color: pink;
 }
+.item p{text-align: center;}
 
 /* best-select 끝*/
+
+/*dress&studio*/
+.drestu{width: 1200px;margin: 0 auto;}
+.dress{float:left;width: 600px;background-color: skyblue;}
+.studio{float:left;width: 600px;background-color: orange;}
+.dr01{float: left;width: 50%;}
+.dr02{float: left;width: 50%;}
+.cont_dr p , .cont_stu p{text-align: center;}
+.cont_dr span, .cont_stu span{font-weight: bold;}
+.st01{float: left;width: 50%;}
+.st02{float: left;width: 50%;}
+
+/*eventBanner*/
+.eventBanner{margin-top: 30px;height: 150px;background-color: pink;width: 100%;background: url(../images/banner.png) no-repeat;}
+.banner{width: 1200px;margin: 0 auto;height: 150px;position: relative;}
+.banner img{display: block;position: absolute;left: 50%;transform: translateX(-50%);padding-top: 20px;}
+.banner p{color: #fff;text-align: center;padding-top: 90px;}

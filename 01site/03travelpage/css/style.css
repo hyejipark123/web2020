@@ -2,8 +2,6 @@
 
 html,body{cursor: url(../images/airport_cur.png) 0 0, auto;}
 
-
-
 /* header start */
 .top_header{
 	background:#0b70a8 url(../images/header_bg.png) no-repeat center top;
@@ -117,17 +115,6 @@ div.airbg{
 	from{top:150px;}
 	to{top:200px;}
 }
-
-div.ani_paper{
-	position: absolute;
-	animation:paper 5s alternate infinite ;
-}
-
-@keyframes paper{
-	from{}
-	to{ }
-}
-
 .topWrap{
 	width: 980px;
 	margin: 0 auto;
@@ -218,7 +205,6 @@ legend{
 	width: 130px;
 }
 .slider_pager img{
-	_background-color: #f00;
 	float: left;
 	margin:20px 15px;
 
@@ -232,11 +218,8 @@ legend{
 	border-bottom: 1px solid #0078a7;
 	font-size: 15px;
 	line-height: 70px;
-
 	}
-.slider_pager a:nth-child(2){
-	background-color: #006599;
-}
+
 .slider_pager a.active{
 	background-color:#fff;
 	color:#000;
