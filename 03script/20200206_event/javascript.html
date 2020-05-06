@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+</head>
+<style>
+	html,body{height: 100%;}
+	div{width: 100%;height: 100%;}
+</style>
+<body>
+	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, tenetur.</p>
+	<input type="button" value="버튼1" onclick="btn1()">
+	<input type="button" value="버튼2" onclick="btn2()">
+
+	<script>
+		function btn1(){
+			alert('글자변경');
+			document.body.style.color="#f00";
+			document.body.style.backgroundColor="#ccc";
+		}
+		function btn2(){
+			document.body.style.color="#000";
+			document.body.style.backgroundColor="#fff";
+		}
+	</script>
+</body>
+</html>

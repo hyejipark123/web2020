@@ -55,6 +55,7 @@
 	position: absolute;
 	top: 35px;
 	right: 200px;
+	cursor: pointer;
 }
 
 /* 이벤트배너 끝 */
@@ -158,9 +159,6 @@ nav.gnb>ul>li:hover .submenu{
 /* header 끝 */
 
 /* section 시작*/
-.container{}
-.slider{}
-.slider>li{}
 #slick-slide-control00, #slick-slide-control01, 
 #slick-slide-control02, #slick-slide-control03{display: none;}   
 .main_dots{
@@ -174,16 +172,20 @@ nav.gnb>ul>li:hover .submenu{
     left: 50%;
     transform: translateX(-50%);
 }
-.slick-active{background-color: #f08080;}
-.main_dots li{float: left; margin-left: 10px;width: 40px;height: 10px;background-color:#071726;}
-.member_txt{
+.slick-slide img{margin: 0 auto;}
+.main_dots li{cursor:pointer;float: left; margin-left: 10px;width: 40px;height: 10px;background-color:#071726;}
+.slide01{position: relative;}
+.slidetext{
 	position: absolute;
-	top: 150px;
-	left: 550px;
+	top: 50%;
+	left: 50%;
 	color: #fff;
 	text-align: center;
+	transform: translate(-50%,-50%);
+	font-size: 20px
+
 }
-.member_txt>p{}
+.title{padding-bottom: 20px;}
 
 /* section 끝*/
 
@@ -191,16 +193,18 @@ nav.gnb>ul>li:hover .submenu{
 #slider02{
 	width: 1200px;
 	margin: 0 auto;
-	background-color: pink;
 }
-.item p{text-align: center;}
+.item p{text-align: center;padding: 10px 0px;}
+.item span{font-weight: bold}
 
 /* best-select 끝*/
 
 /*dress&studio*/
 .drestu{width: 1200px;margin: 0 auto;}
-.dress{float:left;width: 600px;background-color: skyblue;}
-.studio{float:left;width: 600px;background-color: orange;}
+.dress{float:left;width: 600px;}
+.studio{float:left;width: 600px;}
+.cont_dr img{display: block;margin: 0 auto;padding-bottom: 10px;}
+.cont_stu img{display: block;margin: 0 auto;padding-bottom: 10px;}
 .dr01{float: left;width: 50%;}
 .dr02{float: left;width: 50%;}
 .cont_dr p , .cont_stu p{text-align: center;}
@@ -213,3 +217,75 @@ nav.gnb>ul>li:hover .submenu{
 .banner{width: 1200px;margin: 0 auto;height: 150px;position: relative;}
 .banner img{display: block;position: absolute;left: 50%;transform: translateX(-50%);padding-top: 20px;}
 .banner p{color: #fff;text-align: center;padding-top: 90px;}
+
+
+/*consulting*/
+.consulting{width: 1200px;margin: 0 auto;}
+.consulting>img{display: block;padding: 20px 0;}
+.conBox{position: relative;}
+.conBox li{float: left;width: 380px;margin-right: 30px;}
+.conBox li:last-child{margin-right: 0;}
+.conBox li:hover .overlay{opacity: 1;}
+.overlay{width: 380px;height: 213px;
+	background-color: rgba(0,0,0,0.7);
+	border-radius: 15px 0px 0px 15px;
+	position: absolute;top: 0;opacity: 0;transition: 0.3s;}
+.overlay p{
+	text-align: center;
+	color: #fff;
+	width: 130px;
+	height: 50px;
+	border: 1px solid #fff;
+	border-radius: 15px;
+	line-height: 50px;
+	position: absolute;
+	top:50%;
+left: 50%;
+transform: translate(-50%,-50%);}
+
+/*consulting-icon*/
+.conIconWrap{padding-top: 30px;}
+.conIcon{width: 1200px;height: 215px;padding:30px;background-color: #f3dede;margin: 0 auto;border-radius: 15px 0px 0px 15px;}
+.conIcon li{float: left;width: 200px;height: 150px;background-color: #fff;margin-right: 35px;border-radius: 15px 0px 0px 15px;}
+.conIcon li:last-child{margin-right: 0;}
+.conIcon li img:last-child{margin-top: 30px;}
+.conIcon li img{margin-left: 68px;margin-top: 15px;}
+.conIcon li p{text-align: center;font-weight: bold;}
+
+/*midbanner*/
+.mbanner{width: 1200px;margin: 0 auto;padding-top: 50px;}
+.mbanner li{float: left;width: 580px;margin: 0 10px;position: relative;}
+.mbanner li p{text-align: center;}
+.first{font-weight: bold;position: absolute;top:50%;right: 30px;transform: translateY(-50%);}
+.first span{color: #e6b2b3}
+.second{position: absolute;top: 50%;left:70px;transform: translateY(-50%);}
+.second span{font-weight: bold;}
+
+/*review*/
+.reviewWrap{padding-top: 30px;}
+.review{width: 1200px;margin: 0 auto;}
+.review>img{padding: 20px 0;}
+.viewmore{display: block;float: right;padding-top: 30px;}
+.review li{float: left;width: 300px;}
+.review li img{display: block;margin: 0 auto;}
+.reviewTxt{width: 300px;text-align: left;padding: 10px}
+.reviewTxt h4{padding-bottom: 8px;}
+.reviewTxt p{font-size: 14px;color: gray;}
+
+/*footer*/
+footer{background-color: #959595;margin-top: 80px;}
+.footer{width: 1200px;margin: 0 auto;padding: 20px 0;}
+.ftLogo{float: left;width: 20%;}
+.ftLogo img{display: block;margin: 0 auto;}
+.ftText{float: right;width: 80%;color: #dad8d8}
+.ftText a{color:#dad8d8;}
+.ftText li{float: left;margin-right: 20px;padding-bottom: 10px;}
+address{font-size: 14px}
+
+#menu{
+	position: absolute;
+	right: 0;
+	top: 800px; /*상위높이*/
+	width: 100px;
+	margin-left: 360px; /* 좌측폭 위치*/
+}
