@@ -20,10 +20,7 @@
 		for(var i=1;i<11;i++){ // i=i+1
 			document.write(i);
 		}
-
-
 	</script>
-
 	<h3>for문</h3>
 	<script>
 		for(var size=10;size<=35;size+=5){ // size = size + 5
@@ -52,6 +49,37 @@
 			}
 		}
 	</script>
-		
+		<hr>
+	<!-- <script>
+		for(var i=1;i<5;i++){
+			for(var s=0;s=<i;s++){
+				document.write("*");
+			}
+			document.writeln("<br>");
+		}
+	</script> -->	
+	<script>
+		for(var i=0;i<5;i++){
+			var string =""
+			for(var j=0;j<=i;j++){
+				string = string + "*";
+			}
+			document.write(string+"<br>");
+		}
+	</script>
+	<hr>
+	<script>
+		var sum=0;
+		for(var i=1;i<=10;i++){
+			var left = "";
+			for(var j=1;j<=i;j++){
+				left = left +j;
+				if(i!=j){left=left+"+"}
+				sum = sum+j;
+			}
+			document.write(left+"="+sum+"<br>");
+			sum=0;
+		}		
+	</script>
 </body>
 </html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<title>문서 제목</title>
+</head>
+<body>
+	<script>
+		var array = ["서울","부산"];
+		document.write(array[1]+"<br>");
+
+		var object = {
+			name:"Nature of Code",
+			cost:30000,
+			author:"다니엘 쉬프만",
+			isbn:9788968481901,
+			page:620,
+			bill:function(){}
+		}
+		document.write("책이름 : "+object.name+"<br>");
+		document.write("가격 : "+object.cost+"<br>");
+		document.write("저자 : "+object.author+"<br>");
+		document.write("ISBN : "+object.isbn+"<br>");
+		document.write("페이지수 : "+object.page+"<br>");
+	</script>
+	<script>
+		var avg,kor,eng,math;
+		function calcAverage(a,b,c){
+			avg = (a+b+c)/3;
+			return avg;
+		}
+		kor = 80; eng=66;math=76;
+		average=parseInt(calcAverage(kor,eng,math));
+		document.write(average);
+	</script>
+
+	<script>
+		var deg = [15,20,25,30,40];
+		
+		function printAvg(){
+			var sum = 0;
+			var n = deg.length;
+			for(var i=0;i<n;i++){
+				sum = sum+deg[i]; // sum += com[i];
+			}
+			return (sum/n);
+		}
+		var getAvg = printAvg();
+		document.write("평균온도는"+getAvg+"도입니다.");	
+	</script>
+	<br>
+	<script>
+		var a=1;
+		function showNum(){
+			var a;
+			a = 2
+			document.write(a+"<br>");
+		}
+		showNum();
+		document.write(a);
+	</script>
+</body>
+</html>

@@ -2,16 +2,13 @@
 <html lang="ko">
 <head>
 	<meta charset="UTF-8">
-	<title>if</title>
+	<title>문서 제목</title>
 </head>
 <body>
-	<h3>학점출력</h3>
 	<script>
 		var grade;
-		var score = prompt("한성용님 점수를 입력하세요.",100);
-		//prompt()
+		var score=75;
 		console.log(score);
-		score = parseInt(score); // parseInt()
 
 		if(score >= 90){
 			grade = "A";
@@ -22,13 +19,17 @@
 		}else if(score >= 60){
 			grade = "D";
 		}else{
-			grade = "F";
+			grade = "E";
 		}
-		document.write(score + "는 " + grade + "입니다.");
+
+		document.write("한성용점수는"+score + "학점은 " + grade + "입니다.");
 	</script>
 	<script>
-		if(x>10 || x<20){
+		x=15;
+		if(x>10 && x<20){
 			console.log("조건에 맞습니다.");
+		}else{
+			console.log("조건에 맞지않습니다.");
 		}
 	</script>
 </body>
